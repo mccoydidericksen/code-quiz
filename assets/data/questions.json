@@ -1,16 +1,6 @@
 {
     "questions": [
       {
-        "question": "What is the correct way to declare a variable in JavaScript?",
-        "answers": {
-          "a": "var x;",
-          "b": "variable x;",
-          "c": "let x;",
-          "d": "const x;"
-        },
-        "correctAnswer": "c"
-      },
-      {
         "question": "What is the correct way to create a new object in JavaScript?",
         "answers": {
           "a": "var obj = {};",
