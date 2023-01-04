@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "question": "What is not a commonly used data type in JavaScript?",
+        "a": "String",
+        "b": "Number",
+        "c": "Boolean",
+        "d": "Float",
+        "answer": "d"
+    },
+    {
+        "id": 2,
+        "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        "a": "<script src='xxx.js'>",
+        "b": "<script href='xxx.js'>",
+        "c": "<script name='xxx.js'>",
+        "d": "<script file='xxx.js'>",
+        "answer": "a"
+    },
+    {
+        "id": 3,
+        "question": "How do you write 'Hello World' in an alert box?",
+        "a": "alert('Hello World');",
+        "b": "msg('Hello World');",
+        "c": "msgBox('Hello World');",
+        "d": "alertBox('Hello World');",
+        "answer": "a"
+    },
+    {
+        "id": 4,
+        "question": "How do you create a function in JavaScript?",
+        "a": "function = myFunction()",
+        "b": "function myFunction()",
+        "c": "function:myFunction()",
+        "d": "function myFunction()",
+        "answer": "b"
+    },
+    {
+        "id": 5,
+        "question": "How do you call a function named 'myFunction'?",
+        "a": "call myFunction()",
+        "b": "call function myFunction()",
+        "c": "myFunction()",
+        "d": "myFunction",
+        "answer": "c"
+    },
+    {
+        "id": 6,
+        "question": "How to write an IF statement in JavaScript?",
+        "a": "if i = 5",
+        "b": "if i == 5 then",
+        "c": "if (i == 5)",
+        "d": "if i = 5 then",
+        "answer": "c"
+    },
+    {
+        "id": 7,
+        "question": "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
+        "a": "if (i != 5)",
+        "b": "if (i <> 5)",
+        "c": "if i <> 5",
+        "d": "if i =! 5 then",
+        "answer": "a"
+    }, 
+    {
+        "id": 8,
+        "question": "How does a WHILE loop start?",
+        "a": "while (i <= 10)",
+        "b": "while i = 1 to 10",
+        "c": "while (i <= 10; i++)",
+        "d": "while i = 1 to 10 then",
+        "answer": "a"
+    },
+    {
+        "id": 9,
+        "question": "How does a FOR loop start?",
+        "a": "for (i = 0; i <= 5)",
+        "b": "for (i = 0; i <= 5; i++)",
+        "c": "for i = 1 to 5",
+        "d": "for (i <= 5; i++)",
+        "answer": "b"
+    },
+    {
+        "id": 10,
+        "question": "How can you add a comment in a JavaScript?",
+        "a": "'This is a comment",
+        "b": "//This is a comment",
+        "c": "<!--This is a comment-->",
+        "d": "/*This is a comment*/",
+        "answer": "b"
+    }
+]
