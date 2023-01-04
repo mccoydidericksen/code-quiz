@@ -1,92 +1,164 @@
-[
-    {
-        "id": 1,
-        "question": "What is not a commonly used data type in JavaScript?",
-        "a": "String",
-        "b": "Number",
-        "c": "Boolean",
-        "d": "Float",
-        "answer": "d"
+{
+    "questions": [
+      {
+        "question": "What is the correct way to declare a variable in JavaScript?",
+        "answers": {
+          "a": "var x;",
+          "b": "variable x;",
+          "c": "let x;",
+          "d": "const x;"
+        },
+        "correctAnswer": "c"
+      },
+      {
+        "question": "What is the correct way to create a new object in JavaScript?",
+        "answers": {
+          "a": "var obj = {};",
+          "b": "var obj = new Object();",
+          "c": "var obj = Object.create();",
+          "d": "var obj = new obj();"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "What is the correct way to create a new array in JavaScript?",
+        "answers": {
+          "a": "var arr = [];",
+          "b": "var arr = new Array();",
+          "c": "var arr = Array.create();",
+          "d": "var arr = new arr();"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "What is the correct way to concatenate two strings in JavaScript?",
+        "answers": {
+          "a": "str1 + str2",
+          "b": "str1.concat(str2)",
+          "c": "str1 & str2",
+          "d": "str1, str2"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "Which of the following is not a type of loop in JavaScript?",
+        "answers": {
+          "a": "for",
+          "b": "while",
+          "c": "do-while",
+          "d": "repeat"
+        },
+        "correctAnswer": "d"
+      },
+      {
+        "question": "What is the correct syntax for an if statement in JavaScript?",
+        "answers": {
+          "a": "if (condition) { statement }",
+          "b": "if { condition } { statement }",
+          "c": "if condition { statement }",
+          "d": "if (condition) statement"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "What is the correct syntax for a function in JavaScript?",
+        "answers": {
+          "a": "function myFunction() { statement }",
+          "b": "function = myFunction() { statement }",
+          "c": "myFunction() { statement }",
+          "d": "function(myFunction) { statement }"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        "question": "What is the correct way to reference an object's property in JavaScript?",
+        "answers": {
+          "a": "obj.property",
+          "b": "obj['property']",
+          "c": "obj(property)",
+          "d": "obj{property}"
+        },
+        "correctAnswer": "a"
     },
-    {
-        "id": 2,
-        "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        "a": "<script src='xxx.js'>",
-        "b": "<script href='xxx.js'>",
-        "c": "<script name='xxx.js'>",
-        "d": "<script file='xxx.js'>",
-        "answer": "a"
-    },
-    {
-        "id": 3,
-        "question": "How do you write 'Hello World' in an alert box?",
-        "a": "alert('Hello World');",
-        "b": "msg('Hello World');",
-        "c": "msgBox('Hello World');",
-        "d": "alertBox('Hello World');",
-        "answer": "a"
-    },
-    {
-        "id": 4,
-        "question": "How do you create a function in JavaScript?",
-        "a": "function = myFunction()",
-        "b": "function myFunction()",
-        "c": "function:myFunction()",
-        "d": "function myFunction()",
-        "answer": "b"
-    },
-    {
-        "id": 5,
-        "question": "How do you call a function named 'myFunction'?",
-        "a": "call myFunction()",
-        "b": "call function myFunction()",
-        "c": "myFunction()",
-        "d": "myFunction",
-        "answer": "c"
-    },
-    {
-        "id": 6,
-        "question": "How to write an IF statement in JavaScript?",
-        "a": "if i = 5",
-        "b": "if i == 5 then",
-        "c": "if (i == 5)",
-        "d": "if i = 5 then",
-        "answer": "c"
-    },
-    {
-        "id": 7,
-        "question": "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
-        "a": "if (i != 5)",
-        "b": "if (i <> 5)",
-        "c": "if i <> 5",
-        "d": "if i =! 5 then",
-        "answer": "a"
-    }, 
-    {
-        "id": 8,
-        "question": "How does a WHILE loop start?",
-        "a": "while (i <= 10)",
-        "b": "while i = 1 to 10",
-        "c": "while (i <= 10; i++)",
-        "d": "while i = 1 to 10 then",
-        "answer": "a"
-    },
-    {
-        "id": 9,
-        "question": "How does a FOR loop start?",
-        "a": "for (i = 0; i <= 5)",
-        "b": "for (i = 0; i <= 5; i++)",
-        "c": "for i = 1 to 5",
-        "d": "for (i <= 5; i++)",
-        "answer": "b"
-    },
-    {
-        "id": 10,
-        "question": "How can you add a comment in a JavaScript?",
-        "a": "'This is a comment",
-        "b": "//This is a comment",
-        "c": "<!--This is a comment-->",
-        "d": "/*This is a comment*/",
-        "answer": "b"
-    }
-]
+          {
+            "question": "What is the correct way to add an event listener to an element in JavaScript?",
+            "answers": {
+              "a": "element.on('event', function)",
+              "b": "element.addEventListener('event', function)",
+              "c": "element.listen('event', function)",
+              "d": "element.eventListener('event', function)"
+            },
+            "correctAnswer": "b"
+          },
+          {
+            "question": "Which of the following is not a type of error in JavaScript?",
+            "answers": {
+              "a": "SyntaxError",
+              "b": "TypeError",
+              "c": "ReferenceError",
+              "d": "LogicError"
+            },
+            "correctAnswer": "d"
+          },
+          {
+            "question": "Which of the following is not a type of data type in JavaScript?",
+            "answers": {
+              "a": "string",
+              "b": "number",
+              "c": "boolean",
+              "d": "image"
+            },
+            "correctAnswer": "d"
+          },
+          {
+            "question": "Which of the following is not a type of operator in JavaScript?",
+            "answers": {
+              "a": "assignment",
+              "b": "arithmetic",
+              "c": "comparison",
+              "d": "ternary"
+            },
+            "correctAnswer": "a"
+          },
+          {
+            "question": "What is the correct way to round a number down to the nearest integer in JavaScript?",
+            "answers": {
+              "a": "Math.floor(x)",
+              "b": "Math.ceiling(x)",
+              "c": "Math.roundUp(x)",
+              "d": "Math.round(x)"
+            },
+            "correctAnswer": "a"
+          },
+          {
+            "question": "Which of the following is not a method of the String object in JavaScript?",
+            "answers": {
+              "a": "substring()",
+              "b": "toUpperCase()",
+              "c": "toLowerCase()",
+              "d": "addString()"
+            },
+            "correctAnswer": "d"
+          },
+          {
+            "question": "What is the correct way to create a new date in JavaScript?",
+            "answers": {
+              "a": "var d = new Date();",
+              "b": "var d = Date.now();",
+              "c": "var d = Date.new();",
+              "d": "var d = new Date.create();"
+            },
+            "correctAnswer": "a"
+          },
+          {
+            "question": "Which of the following is not a method of the Array object in JavaScript?",
+            "answers": {
+              "a": "reverse()",
+              "b": "sort()",
+              "c": "push()",
+              "d": "addElement()"
+            },
+            "correctAnswer": "d"
+          }     
+    ]
+}
