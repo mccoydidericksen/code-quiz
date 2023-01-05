@@ -1,13 +1,18 @@
-// var questions = fetch('./assets/data/questions.json').then((response) => response.json()).then((json));
 import {questions} from '../../assets/data/questions.js';
-console.log(questions);
 var submitButton = document.getElementById("submit");
 
+function addIdtoQuestions(){
+    for(var i=0; i<questions.length; i++){
+        questions[i].id = i;
+    }
+}
+
+addIdtoQuestions();
 
 function checkAnswer(event) {
     event.preventDefault();
     var options = document.getElementsByName("option");
-    for(i=0; i<options.length; i++){
+    for(var i=0; i<options.length; i++){
         if(options[i].checked){
             var selectedAnswer = options[i]
         }
@@ -16,5 +21,6 @@ function checkAnswer(event) {
         console.log(selectedAnswer)
     }
 }
+
 
 submitButton.addEventListener("click", checkAnswer);
