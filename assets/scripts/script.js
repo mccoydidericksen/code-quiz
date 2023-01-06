@@ -23,8 +23,8 @@ function checkAnswer(event) {
     event.preventDefault();
     if (submitButton.textContent === "Start Quiz") {
         toggleTimer(1);
-        setTimeout(clearAnswer, 1000);
-        setTimeout(nextQuestion, 1000);
+        clearAnswer();
+        nextQuestion();
         submitButton.textContent = "Submit Answer";
     }
     else {
@@ -35,14 +35,14 @@ function checkAnswer(event) {
             }
         }
         if(selectedAnswer){
-            console.log(selectedAnswer.id);
-            console.log(questions[questionIndex-1]);
             if(selectedAnswer.id === questions[questionIndex -1].correctAnswer){
                 document.getElementById("option" + selectedAnswer.id.toUpperCase()).style.backgroundColor = "green";
                 correctCount++;
+                secondsLeft += 5;
             }
             else{
                 document.getElementById("option" + selectedAnswer.id.toUpperCase()).style.backgroundColor = "red";
+                secondsLeft -= 5;
             }
         }
         setTimeout(clearAnswer, 1000);
