@@ -5,14 +5,13 @@ var optionA = document.getElementById("optionA");
 var optionB = document.getElementById("optionB");
 var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
-var seconds = document.getElementById("seconds");
 var timerEl = document.getElementById("timer");
+var options = document.getElementsByName("option");
 var questionIndex = 0;
 var correctCount = 0;
-var secondsLeft = 20;
+var secondsLeft = 3;
 
 function clearAnswer() {
-    var options = document.getElementsByName("option");
     for(var i=0; i<options.length; i++){
         options[i].checked = false;
         document.getElementById("option" + options[i].id.toUpperCase()).style.backgroundColor = "white";
@@ -51,12 +50,9 @@ function checkAnswer(event) {
 }
 
 function endQuiz() {
-    questionEl.textContent = "Quiz Complete!";
-    optionA.textContent = "Correct Answers: " + correctCount;
-    optionB.textContent = "Incorrect Answers: " + (questions.length - correctCount);
-    optionC.textContent = "Score: " + correctCount;
-    optionD.style.display = "none";
+    document.getElementById("quiz-form").style.display = "none";
     submitButton.style.display = "none";
+    document.getElementById("score").textContent = "Your score is " + correctCount + " out of " + questions.length + "!";
 }
 
 function nextQuestion() {
