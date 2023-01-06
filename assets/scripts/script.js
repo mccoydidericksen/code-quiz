@@ -13,7 +13,7 @@ var scoreListEl = document.getElementById("score-list");
 var scoreList = JSON.parse(localStorage.getItem("scoreList"));
 var questionIndex = 0;
 var correctCount = 0;
-var secondsLeft = 3;
+var secondsLeft = 21;
 
 function clearAnswer() {
     for(var i=0; i<options.length; i++){
