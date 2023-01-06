@@ -8,6 +8,7 @@ var optionD = document.getElementById("optionD");
 var timerEl = document.getElementById("timer");
 var options = document.getElementsByName("option");
 var initialsButton = document.getElementById("submit-initials");
+var showScoresButton = document.getElementById("show-scores");
 var scoreListEl = document.getElementById("score-list");
 var scoreList = JSON.parse(localStorage.getItem("scoreList"));
 var questionIndex = 0;
@@ -56,6 +57,7 @@ function endQuiz() {
     document.getElementById("quiz-form").style.display = "none";
     submitButton.style.display = "none";
     document.getElementById("score").textContent = "Your score is " + correctCount + " out of " + questions.length + "!";
+    showScores();
 }
 
 function nextQuestion() {
@@ -89,6 +91,7 @@ function toggleTimer(toggle) {
 }
 
 function showScores() {
+    document.getElementById("results").style.display = "block";
     if(scoreList){
         // sort scoreList
         for(var i=0; i<scoreList.length; i++){
@@ -99,6 +102,10 @@ function showScores() {
                     scoreList[j] = temp;
                 }
             }
+        }
+        //clear all scoreEl if exists
+        while(scoreListEl.firstChild){
+            scoreListEl.removeChild(scoreListEl.firstChild);
         }
         // display scoreList
         for(var i=0; i<scoreList.length; i++){
@@ -131,6 +138,6 @@ function addScore(event) {
 }
 }
 
-showScores();
+showScoresButton.addEventListener("click", showScores);
 submitButton.addEventListener("click", checkAnswer);
 initialsButton.addEventListener("click", addScore);
