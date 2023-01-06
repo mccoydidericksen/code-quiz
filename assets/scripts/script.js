@@ -7,6 +7,9 @@ var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
 var timerEl = document.getElementById("timer");
 var options = document.getElementsByName("option");
+var initialsButton = document.getElementById("submit-initials");
+var scoreListEl = document.getElementById("score-list");
+var scoreList = JSON.parse(localStorage.getItem("scoreList"));
 var questionIndex = 0;
 var correctCount = 0;
 var secondsLeft = 3;
@@ -85,4 +88,49 @@ function toggleTimer(toggle) {
     }
 }
 
+function showScores() {
+    if(scoreList){
+        // sort scoreList
+        for(var i=0; i<scoreList.length; i++){
+            for(var j=i+1; j<scoreList.length; j++){
+                if(scoreList[i].score < scoreList[j].score){
+                    var temp = scoreList[i];
+                    scoreList[i] = scoreList[j];
+                    scoreList[j] = temp;
+                }
+            }
+        }
+        // display scoreList
+        for(var i=0; i<scoreList.length; i++){
+            var scoreEl = document.createElement("li");
+            scoreEl.textContent = scoreList[i].initials + " - " + scoreList[i].score;
+            scoreListEl.appendChild(scoreEl);
+        }
+    }
+}
+
+function addScore(event) {
+    event.preventDefault();
+    var initials = document.getElementById("initials").value;
+    var score = {
+        initials: initials,
+        score: correctCount
+    } 
+    if(initials === ""){
+        alert("Please enter your initials");
+        return;
+    } else {
+    if(scoreList){
+        scoreList.push(score);
+    }
+    else{
+        scoreList = [score];
+    }
+    localStorage.setItem("scoreList", JSON.stringify(scoreList));
+    showScores();
+}
+}
+
+showScores();
 submitButton.addEventListener("click", checkAnswer);
+initialsButton.addEventListener("click", addScore);
